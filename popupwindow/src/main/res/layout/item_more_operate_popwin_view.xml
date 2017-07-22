@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:minWidth="120dp"
+        android:textSize="17dp" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="@color/color_c4"
+        >
+    </View>
+</LinearLayout>

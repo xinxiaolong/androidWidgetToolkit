@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.xinxiaolong.widget.toolkit.popupwindow.indicator.IndicatorTopView
+            android:id="@+id/triangle_view"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            />
+    </AbsoluteLayout>
+
+    <com.xinxiaolong.widget.toolkit.popupwindow.indicator.IndicatorPWContentView
+        android:id="@+id/ll_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_white_bg">
+    </com.xinxiaolong.widget.toolkit.popupwindow.indicator.IndicatorPWContentView>
+
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.xinxiaolong.widget.toolkit.popupwindow.indicator.IndicatorBottomView
+            android:id="@+id/reverse_triangle_view"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:visibility="gone"
+            />
+    </AbsoluteLayout>
+</LinearLayout>

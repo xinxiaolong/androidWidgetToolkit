@@ -5,4 +5,14 @@
         <!-- Theme customizations available in newer API levels can go in res/values-vXX/styles.xml, while customizations related to  backward-compatibility can go here. -->
     </style>
 
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+    <item name="android:windowNoTitle">true</item>
+     </style>
+
+    <style name="hide_display_stype">
+        <item name="android:windowEnterAnimation">@anim/popwin_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/popwin_exit_anim</item>
+    </style>
+
 </resources>
