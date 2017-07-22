@@ -6,8 +6,6 @@ import android.widget.TextView;
 
 import com.xinxiaolong.widget.toolkit.popupwindow.indicator.IndicatorPopWindow;
 
-import java.util.List;
-
 /**
  * Created by xiaolong on 2017/7/22.
  * email：xinxiaolong123@foxmail.com
