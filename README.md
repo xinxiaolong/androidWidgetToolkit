@@ -39,7 +39,7 @@
 <dushibaiyu@yahoo.com>
 
 ### 只是显示图片
-![github](http://github.com/unicorn.png "github")
+![github](http://pic.58pic.com/58pic/16/42/96/56e58PICAu9_1024.jpg)
 
 ### 想点击某个图片进入一个网页,比如我想点击github的icorn然后再进入www.github.com
   [![image]](http://www.github.com/)
