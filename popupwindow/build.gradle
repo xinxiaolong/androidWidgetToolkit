@@ -1,11 +1,13 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -21,13 +23,73 @@ android {
     }
 }
 
+//项目的groupId
+group = 'com.xinxiaolong.android.widget_toolkit'
+//项目版本号
+version = '10.0.0'
+
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+task generateJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task generateJavadocsJar(type: Jar, dependsOn: generateJavadocs) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+
+
+artifacts{
+    archives generateSourcesJar
+}
+
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+
+
+
+//bintray服务器配置
+bintray {
+    user = "xinxiaolong"
+    key = "d4c9a75cc1496bbf20b4cefe6dd3554be76387dd"
+
+    pkg {
+        //上传的仓库
+        repo = 'android'
+        //仓库里的包
+        name = 'widget_toolkit'
+        //版本号描述信息
+        version {
+            name = '10.0.0-release'
+            desc = "包的描述"
+            vcsTag = '2.0.0'
+        }
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/xinxiaolong/androidWidgetToolkit.git'
+        websiteUrl = 'https://github.com/xinxiaolong/androidWidgetToolkit'
+    }
+
+    configurations = ['archives']
+
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 
-    compile project(path: ':core')
+    compile 'com.xinxiaolong.android.widget_toolkit:core:4.0.0'
+
 }
+

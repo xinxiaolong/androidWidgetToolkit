@@ -7,6 +7,7 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.xinxiaolong.widget.toolkit.core.edit_text.Checker;
 import com.xinxiaolong.widget.toolkit.core.util.UIHelper;
 import com.xinxiaolong.widget.toolkit.popupwindow.R;
 

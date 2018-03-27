@@ -1,8 +1,8 @@
 package com.xinxiaolong.widget.toolkit.popupwindow.indicator;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.widget.Checkable;
 import android.widget.LinearLayout;
 
 /**
@@ -16,7 +16,7 @@ public class IndicatorPWContentView extends LinearLayout {
         super(context);
     }
 
-    public IndicatorPWContentView(Context context, @Nullable AttributeSet attrs) {
+    public IndicatorPWContentView(Context context,AttributeSet attrs) {
         super(context, attrs);
     }
 
